@@ -1,10 +1,8 @@
 <?php
-$locale = 'es_ES';
-putenv("LC_ALL=$locale");
+$locale = 'en_ES';
 setlocale(LC_ALL, $locale);
-bindtextdomain('translation', 'E:\Xampp\htdocs\translate\locale');
-bind_textdomain_codeset('translation', 'UTF-8');
+bindtextdomain('translation', dirname(__FILE__) . "/locale");
+
 textdomain('translation');
 
-echo _('Hello, world!') . "<br>"; // Output: ¡Hola, mundo!
-echo _('Goodbye!'); // Output: ¡Adiós!
+echo _('¡Hola, mundo!') . "<br>"; // Output: ¡Hola, mundo!
